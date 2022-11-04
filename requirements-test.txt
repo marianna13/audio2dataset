@@ -1,6 +1,8 @@
-black==22.3.0
-mypy==0.942
-pylint==2.13.4
-pytest-cov==3.0.0
-pytest-xdist==2.5.0
-pytest==7.0.1
+black
+mypy
+numpy
+pylint
+pytest-cov
+pytest-xdist
+pytest
+librosa

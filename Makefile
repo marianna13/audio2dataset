@@ -1,26 +1,26 @@
 install: ## [Local development] Upgrade pip, install requirements, install package.
-	python -m pip install -U pip
-	python -m pip install -e .
+	python3 -m pip install -U pip
+	python3 -m pip install -e .
 
 install-dev: ## [Local development] Install test requirements
-	python -m pip install -r requirements-test.txt
+	python3 -m pip install -r requirements-test.txt
 
 lint: ## [Local development] Run mypy, pylint and black
-	python -m mypy python_template
-	python -m pylint python_template
-	python -m black --check -l 120 python_template
+	python3 -m mypy audio2dataset
+	python3 -m pylint audio2dataset
+	python3 -m black --check -l 120 audio2dataset
 
-black: ## [Local development] Auto-format python code using black
-	python -m black -l 120 .
+black: ## [Local development] Auto-format python3 code using black
+	python3 -m black -l 120 .
 
 build-pex:
 	python3 -m venv .pexing
-	. .pexing/bin/activate && python -m pip install -U pip && python -m pip install pex
-	. .pexing/bin/activate && python -m pex setuptools . -o python_template.pex -v
+	. .pexing/bin/activate && python3 -m pip install -U pip && python3 -m pip install pex
+	. .pexing/bin/activate && python3 -m pex setuptools . -o python3_template.pex -v
 	rm -rf .pexing
 
 test: ## [Local development] Run unit tests
-	python -m pytest -x -s -v tests
+	python3 -m pytest -x -s -v tests
 
 .PHONY: help
 

@@ -12,7 +12,7 @@ from .writer import (
 )
 from .reader import Reader
 from .downloader import Downloader
-from .distributor import multiprocessing_distributor
+from .distributor import multiprocessing_distributor, pyspark_distributor
 import fsspec
 import sys
 import signal
